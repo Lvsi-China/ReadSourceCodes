@@ -1,33 +1,32 @@
-入口文件：public/index.php
+# Laravel源码笔记
 
-```php
-// 开始计时
-define('LARAVEL_START', microtime(true));
+## 介绍
 
-// 引入 composer 的自动加载文件
-require __DIR__ . '/../vendor/autoload.php';
+对于PHP框架，目前最受关注的可能就是Laravel了，虽然有些人不喜欢，但不得不承认Laravel的地位。我也算是非常喜欢Laravel，大三(2017年)开始学习并使用Laravel。虽然以前不可避免的阅读了一点的源代码，但是没有想过记录下来。人总是随着时间的流逝才能意识到自己应该做什么事情。
 
-// 正式启动 Larvel，生成一个指代整个项目工程的 app 全局对象
-$app = require_once __DIR__ . '/../bootstrap/app.php';
+对于Laravel阅读笔记，我组织了下面7个章节：
 
-// 通过全局对象 app 的构造对象的 make 方法创建一个 Kernel 核心对象
-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+| 章节 | 主题 |
+|---|---|
+| 第1章 | [程序入口](#p1) |
+| 第2章 | [创建Application](#p2) |
+| 第3章 | [实例化Kernel](#p3) |
+| 第4章 | [请求快照](#p4) |
+| 第5章 | [Kernel处理请求](#p5) |
+| 第6章 | [返回响应](#p6) |
+| 第7章 | [中止Kernel](#p7) |
 
-/*-------------这部分是整个 ->请求->响应-> 周期----------------*/
+## <span id="p1">程序入口</span>
 
-// 获取当前的请求快照 , 然后赋给全局对象 $request.
-// 将 $request 传入 $kernel , 开始处理这个请求.
-// 请求处理完成之后 , 将结果封装成一个【响应对象】并赋给 $response
-$response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
-);
+## <span id="p3">创建Application</span>
 
-// $response 将响应结果返回
-$response->send();
+## <span id="p3">实例化Kernel</span>
 
-// 内核停止
-$kernel->terminate($request, $response);
+## <span id="p4">请求快照</span>
 
-/*-------------这部分是整个 ->请求->响应-> 周期----------------*/
+## <span id="p5">Kernel处理请求</span>
 
-```
+## <span id="p6">返回响应</span>
+
+## <span id="p7">中止Kernel</span>
+

@@ -7,15 +7,16 @@
 
 ## 目录
 
-- ### JavaScript
+1. ### JavaScript
 
-	<!--学习Seajs自己也写一个-->
-	- ### Seajs
+<!--学习Seajs自己也写一个-->
+| 1| 2 | 3 |
+| --- | --- | --- |
+| [Seajs](./JavaScript/Seajs/README.md) | | |
 
+2. ### PHP
 
-- ### PHP
-
-| Column-1| Column-2 | Column-3 |
+| 1| 2 | 3 |
 | --- | --- | --- |
 | [ReactPHP-EventLoop](./PHP/ReactPHP/Event-Loop/README.md) | [Laravel](./PHP/Laravel/README.md) | |
 
